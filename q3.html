@@ -4,15 +4,45 @@
 
 <head>
     <link rel="stylesheet" crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Itim&family=Outfit:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+<style>
+    
+    .form-center {
+        align-content: center;
+        width: 400px;
+        margin: 0 auto;
+    }
 
+    footer {
+            font-family: 'Cedarville Cursive';
+            font-size: larger;
+            background-color: #465e58;
+            color: #f8f9fa;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+        
+    .button-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+</style>
 
 <body>
     <header>
         <h1>Contact us</h1>
     </header>
     <main>
-        <!-- TODO describe why this form will or will not work on the internet -->
+
+        This form will work on the internet as long as the "action" attribute is set to a valid URL that can process the data.
+        Without a server-side script to process the form, submitting information would result in nothing.
+       
+        <div class="form-center">
         <form action="localhost:8000" method="post">
             <div class="form-group">
                 <label for="name">Name</label>
@@ -20,18 +50,24 @@
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input class="form-control" id="email" type="email" name="Email">
+                <input class="form-control" id="email" type="email" name="Email" required placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input class="form-control" id="subject" name="subject" required placeholder="Enter subject">
             </div>
             <div class="form-group">
                 <label for="message">Message</label>
                 <textarea class="form-control" id="message" name="Message"></textarea>
             </div>
+            <div class="button-right">
             <input class="btn btn-primary" type="submit" value="Submit" />
             </div>
         </form>
+    </div>
     </main>
     <footer>
-        <p>Your name here</p>
+        <p>Kris Banse</p>
     </footer>
 </body>
 
